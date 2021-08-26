@@ -23,3 +23,17 @@ prevBtn.addEventListener("click", function () {
   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
 });
+
+carouselSlide.addEventListener("transitionend", function () {
+  //every time trigger when transition is completed
+  if (carouselImages[counter].id == "firstClone") {
+    counter = 1;
+    carouselSlide.style.transition = "none";
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+  }
+  if (carouselImages[counter].id == "lastClone") {
+    counter = carouselImages.length - 2;
+    carouselSlide.style.transition = "none";
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+  }
+});
