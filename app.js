@@ -13,12 +13,14 @@ carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
 //Button Listener
 nextBtn.addEventListener("click", function () {
+  if (counter >= carouselImages.length - 1) return;
   counter++;
   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
 });
 
 prevBtn.addEventListener("click", function () {
+  if (counter <= 0) return;
   counter--;
   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
