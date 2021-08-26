@@ -14,10 +14,31 @@ img {
   margin: auto;
   overflow: hidden;
   border: 5px solid black;
+  position: relative;
 }
 
 .carousel-slide {
   display: flex;
   height: 500px;
   /* transform: translateX(-912px); */
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  opacity: 0.5;
+  font-size: 30px;
+  left: 5%;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  z-index: 10;
+  color: white;
+  opacity: 0.5;
+  font-size: 30px;
 }
